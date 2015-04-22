@@ -1,0 +1,5 @@
+{"docs":[
+{"id":"fruit","key":"fruit","value":{"rev":"1-967a00dff5e02add41819138abb3284d"},"doc":{"_id":"fruit","_rev":"1-967a00dff5e02add41819138abb3284d"}},
+{"id":"price","key":"price","value":{"rev":"1-967a00dff5e02add41819138abb3284d"},"doc":{"_id":"price","_rev":"1-967a00dff5e02add41819138abb3284d"}},
+{"id":"test","key":"test","value":{"rev":"1-967a00dff5e02add41819138abb3284d"},"doc":{"_id":"test","_rev":"1-967a00dff5e02add41819138abb3284d"}}
+]}
