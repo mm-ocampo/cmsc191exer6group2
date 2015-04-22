@@ -3,15 +3,11 @@ Steps:
 
 2. Create a db in your couchdb named "cmsc191-exer6-db" and import cmsc191-exer6-db.json from the dump folder.
 
-3.  Download the necessary files here: https://github.com/dready92/PHP-on-Couch/
+3. Go to http://localhost/cmsc191exer6group2/couchDB/ to test if the connection is working.
 
-4. Follow the steps in installing couchdb in ci here: https://github.com/dready92/PHP-on-Couch/tree/master/frameworks/ci
+4. To know if its properly working, go to the couchDB/screenshots/ and view 'connection-established.png'
 
-5. Go to http://localhost/cmsc191exer6group2/couchDB/ to test if the connection is working.
-
-6. To know if its properly working, go to the couchDB/screenshots/ and view 'connection-established.png'
-
-7. Congratulations for the successful installation! :)
+5. Congratulations for the successful installation! :)
 
 by:
 Ocampo, Ma. Margarita M.
