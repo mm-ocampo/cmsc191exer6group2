@@ -9,7 +9,28 @@ class Home_model extends CI_Model
     }
 
     public function retrieve_all(){
-        return $this->couchdb->getDoc("fruit");
+    	$this->couchdb->useDatabase("fruit");
+        return $this->couchdb->getAllDocs();
+    }
+
+    public function add_in_fruit($doc){
+    	$this->couchdb->useDatabase("fruit");
+    	return $this->couchdb->storeDoc($doc);
+    }
+
+    public function add_in_price($doc){
+    	$this->couchdb->useDatabase("price");
+    	return $this->couchdb->storeDoc($doc);
+    }
+
+    public function delete_in_fruit($doc){
+    	$this->couchdb->useDatabase("fruit");
+    	return $this->couchdb->deleteDoc($doc);
+    }
+
+    public function delete_in_price(){
+    	$this->couchdb->useDatabase("price");
+    	return $this->couchdb->deleteDoc($doc);	
     }
 
 }

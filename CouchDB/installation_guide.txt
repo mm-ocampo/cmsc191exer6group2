@@ -1,7 +1,7 @@
 Steps:
 1. Make sure that your WAMP/LAMP and couchdb.bat are running in your devices.
 
-2. Create a db in your couchdb named "cmsc191-exer6-db" and import cmsc191-exer6-db.json from the dump folder.
+2. Create 2 dbs on your couch db(fruit and price). 
 
 3. Go to http://localhost/cmsc191exer6group2/couchDB/ to test if the connection is working.
 
