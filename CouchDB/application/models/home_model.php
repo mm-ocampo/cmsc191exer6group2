@@ -10,7 +10,18 @@ class Home_model extends CI_Model
 
     public function retrieve_all(){
     	$this->couchdb->useDatabase("fruit");
-        return $this->couchdb->getAllDocs();
+        $query = $this->couchdb->getAllDocs();
+        $result = [];
+        foreach ($query->rows as $item){
+            $row = $this->couchdb->getDoc($item->id);
+            $temp = array();
+            $temp['id'] = $row->_id;
+            $temp['name'] = $row->name;
+            $temp['qty'] = $row->qty;
+            $temp['dist'] = $row->dist;
+            array_push($result, $temp);
+        }
+        return $result;
     }
 
     public function add_in_fruit($doc){

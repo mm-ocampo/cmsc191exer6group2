@@ -13,9 +13,9 @@ class Home extends CI_Controller {
 	}
 	
 	public function index(){
-		/*$fruits = $this->home_model->retrieve_all();
-		var_dump($fruits);*/
-		$this->load->view('home');
+		$query = $this->home_model->retrieve_all();
+		$data['fruits'] = $query;
+		$this->load->view('home', $data);
 	}
 
 	// Add fruit record
