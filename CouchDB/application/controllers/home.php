@@ -4,12 +4,17 @@ class Home extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
+
+		$this->load->helper('url');
+		$this->load->view('heading');
+		$this->load->view('/modals/addFruitModal');
+		$this->load->view('/modals/editFruitModal');
 		$this->load->model('home_model');
 	}
 	
 	public function index(){
-		$fruits = $this->home_model->retrieve_all();
-		var_dump($fruits);
+		/*$fruits = $this->home_model->retrieve_all();
+		var_dump($fruits);*/
 		$this->load->view('home');
 	}
 
