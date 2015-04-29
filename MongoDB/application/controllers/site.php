@@ -7,7 +7,10 @@ class Site extends CI_Controller {
     {
         parent::__construct();
         //loading  the mongodb library
-        $this->load->library('mongo_db');
+    }
+
+    public function index(){
+        $query = $this->mongo_db->select('name');
     }
 
 }
