@@ -2,8 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
-    public function index()
+
+    public function __construct()
     {
-        $this->load->view();
+        parent::__construct();
+        //loading  the mongodb library
+        $this->load->library('mongo_db');
     }
+
 }
