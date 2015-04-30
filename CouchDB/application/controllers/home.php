@@ -21,12 +21,21 @@ class Home extends CI_Controller {
 	// Add fruit record
 	public function add_fruit(){
 		// use json_encode then json_decode
+		if($this->input->post()){
+			$doc['name'] = $this->input->post('fruitName');
+			$doc['qty'] = $this->input->post('quantity');
+			$doc['dist'] = $this->input->post('distributor');
 
-		// insert in fruit db
-		$query = $this->home_model->add_in_fruit($doc);
+			$doc = json_decode(json_encode($doc));
+			// insert in fruit db
+			$query = $this->home_model->add_in_fruit($doc);
+			if($query){
+				$this->index();
+			}
 
-		// insert in price db
-		$query2 = $this->home_model->add_in_price($doc2);
+			// insert in price db
+			//$query2 = $this->home_model->add_in_price($doc2);
+		}
 	}
 
 	// Delete fruit record
