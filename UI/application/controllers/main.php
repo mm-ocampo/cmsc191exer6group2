@@ -10,6 +10,7 @@ class Main extends CI_Controller {
 		// LOAD ALL MODALS THAT WILL BE USED
 		$this->load->view('/modals/addFruitModal');
 		$this->load->view('/modals/editFruitModal');
+		$this->load->view('/modals/editPriceModal');
 	}
 
 	public function index(){

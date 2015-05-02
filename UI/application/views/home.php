@@ -10,22 +10,27 @@
 	<div class="row tableRow">
 		<div class="col-md-12 text-center">
 			<div class="tableDiv">
-				<table class="table table-striped table-bordered">
+				<table class="table table-bordered">
 				  	<tr>
-						<td class="th">Name</td>
-						<td class="th">Quantity</td>
-						<td class="th">Distributor</td>
-						<td class="th">Price</td>
-						<td class="th" colspan="2">Action</td>
+						<td class="th" rowspan="2">Name</td>
+						<td class="th" rowspan="2">Quantity</td>
+						<td class="th" rowspan="2">Distributor</td>
+						<td class="th" rowspan="2">Price</td>
+						<td class="th" colspan="3">Action</td>
 					</tr>
-
+					<tr>
+						<td class="subTh">Edit Fruit</td>
+						<td class="subTh">Edit Price</td>
+						<td class="subTh">Delete Fruit</td>
+					</tr>
 					<tr>
 						<td>Mango</td>
 						<td>...</td>
 						<td>...</td>
 						<td>...</td> 
 						<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
-						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-danger "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<tr>
@@ -34,6 +39,7 @@
 						<td>...</td>
 						<td>...</td> 
 						<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
@@ -43,6 +49,7 @@
 						<td>...</td>
 						<td>...</td> 
 						<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
@@ -52,12 +59,13 @@
 						<td>...</td>
 						<td>...</td> 
 						<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<!-- THIS IS THE ADD BUTTON (PLUS SIGN) -->
 					<tr>
-						<td colspan="5"></td>
+						<td colspan="6"></td>
 						<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addFruitModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></td>
 					</tr>
 
