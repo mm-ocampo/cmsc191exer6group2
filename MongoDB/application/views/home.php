@@ -29,7 +29,16 @@
 							echo "<td>${row["name"]}</td>";
 							echo "<td>${row["qty"]}</td>";
 							echo "<td>${row["dist"]}</td>";
-							echo "<td>100</td>";
+							echo "<td>";
+							echo "<table>";
+							foreach($row["price"] as $r){
+								echo "<tr>";
+								echo "<td>${r["date"]}</td>";
+								echo "<td>${r["price"]}</td>";
+								echo "</tr>";
+							}
+							echo "</table>";
+							echo "</td>";
 							echo "<td><button type=\"button\" class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><button type=\"button\" class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#editPriceModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><button type=\"button\" class=\"btn btn-danger\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
