@@ -16,19 +16,19 @@
 			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="addFruitForm" id="addFruitForm">
 							  <div class="form-group">
 							    <label for="fruitName">Name</label>
-							    <input type="text" class="form-control" id="fruitName" placeholder="Enter fruit name">
+							    <input type="text" name = "fruitName" class="form-control" id="fruitName" placeholder="Enter fruit name">
 							  </div>
 							  <div class="form-group">
 							    <label for="quantity">Quantity</label>
-							    <input type="text" class="form-control" id="quantity" placeholder="Quantity">
+							    <input type="text" name="quantity" class="form-control" id="quantity" placeholder="Quantity">
 							  </div>
 							  <div class="form-group">
 							    <label for="distibutor">Distributor</label>
-							    <input type="text" class="form-control" id="distributor" placeholder="Distributor">
+							    <input type="text" name="distributor" class="form-control" id="distributor" placeholder="Distributor">
 							  </div>
 							  <div class="form-group">
 							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Quantity">
+							    <input type="text" name="price" class="form-control" id="price" placeholder="Quantity">
 							  </div>
 						</form>
 										            
