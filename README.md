@@ -21,6 +21,7 @@ INSTALLATION INSTRUCTIONS:
        **libsasl.dll**
      to your APACHE bin directory (**xampp/apache/bin** or **wamp/apache/apache<version>/bin**)
    7. Run your Apache server. It should work now.
+
 **2. Run MongoDB**
    1. From your command line, run mongod.exe
    2. Open another command line and run mongo.exe
@@ -40,4 +41,5 @@ INSTALLATION INSTRUCTIONS:
         }
     )
     ```
+
 **3. Go to localhost/cmsc191exer6group2/MongoDB**
