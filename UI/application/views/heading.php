@@ -7,6 +7,7 @@
 	<title>Fruit Engine</title>
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/font-awesome.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/191.css"/>
 	
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>

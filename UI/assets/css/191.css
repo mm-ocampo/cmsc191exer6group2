@@ -1,25 +1,52 @@
-.horse{
-	width: 150px;
-	height: 150px;
+.title{
+	color: #000;
+	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	font-size: 50pt;
+	padding:  2%;
 }
 
-.engineName{
-	color: #333;
-	font-family: 'Raleway', sans-serif;	
-}
-
-.topLine{
-	background-color: #0099CC;
-	height: 5px;
-	margin-bottom:100px;
-}
 
 .tableRow{
 	padding: 50px;
+	color: #333;
 }
 
 .plus{
 	font-size: 18pt;
 	color: green;
+}
+
+.titleRow{
+	background: url('../images/background.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+	padding-top: 10px;
+}
+
+.tableRow .th{
+	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	font-size: 16pt;
+}
+
+td{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+.footer{
+	background-color: #333;
+	color: #666;
+	font-size: 14pt;
+	padding: 2% 2%;
+}
+
+.gitIcon{
+	font-size: 20pt;
+	margin: 0 10px;
+}
+
+.copyright{
+	font-size: 12pt;
 }
 
