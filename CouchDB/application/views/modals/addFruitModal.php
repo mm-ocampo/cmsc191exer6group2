@@ -28,7 +28,7 @@
 							  </div>
 							  <div class="form-group">
 							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Quantity">
+							    <input type="text" class="form-control" id="price" name="price" placeholder="Price">
 							  </div>
 						</form>
 										            

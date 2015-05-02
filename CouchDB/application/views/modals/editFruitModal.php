@@ -13,7 +13,7 @@
 
 
 			          	<!-- THIS IS THE ADD A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="addFruitForm" id="addFruitForm">
+			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="editFruitForm" id="editFruitForm">
 							  <div class="form-group">
 							    <label for="fruitName">Name</label>
 							    <input type="text" class="form-control" id="fruitName" placeholder="Enter fruit name">
@@ -28,7 +28,7 @@
 							  </div>
 							  <div class="form-group">
 							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Quantity">
+							    <input type="text" class="form-control" id="price" placeholder="Price">
 							  </div>
 						</form>
 										            
@@ -37,7 +37,7 @@
 
 			        <div class="modal-footer">
 			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			          <button type="submit" class="btn btn-primary" form="addFruitForm">Save changes</button>
+			          <button type="submit" class="btn btn-primary" form="editFruitForm">Save changes</button>
 			        </div>
 			      </div><!-- /.modal-content -->
 			    </div><!-- /.modal-dialog -->
