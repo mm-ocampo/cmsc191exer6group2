@@ -28,6 +28,7 @@ INSTALLATION INSTRUCTIONS:
    3. type the following commands (in order):
     ```
     use cs191
+
     db.createUser(
         {
             user: "cs191admin",
