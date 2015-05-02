@@ -24,6 +24,17 @@ class Home_model extends CI_Model
         return $result;
     }
 
+    public function retrieve_all_prices(){
+        $this->couchdb->useDatabase("price");
+        $query =$this->couchdb->getAllDocs();
+        $result = array();
+        foreach ($query->rows as $item){
+            $row = $this->couchdb->getDoc($item->id);
+            $result[$row->name] = $row->price;
+        }
+        return $result;
+    }
+
     public function add_in_fruit($doc){
     	$this->couchdb->useDatabase("fruit");
     	return $this->couchdb->storeDoc($doc);
