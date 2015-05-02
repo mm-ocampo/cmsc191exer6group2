@@ -1,0 +1,57 @@
+.title{
+	color: #000;
+	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	font-size: 50pt;
+	padding:  2%;
+}
+
+
+.tableRow{
+	padding: 50px;
+	color: #333;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.tableDiv{
+	background-color: #231F20	;
+	color: #fff;
+}
+
+.titleRow{
+	background: url('../images/background.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+	padding-top: 10px;
+}
+
+.tableRow .th{
+	font-size: 15pt;
+	background-color: #EC1D25;
+}
+
+.subTh{
+	font-size: 11pt;
+	background-color: #EC1D25;
+}
+
+td{
+	font-size: 10pt;
+}
+
+.footer{
+	background-color: #333;
+	color: #666;
+	font-size: 14pt;
+	padding: 2% 2%;
+}
+
+.gitIcon{
+	font-size: 20pt;
+	margin: 0 10px;
+}
+
+.copyright{
+	font-size: 12pt;
+}
+
