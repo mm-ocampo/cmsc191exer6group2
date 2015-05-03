@@ -55,3 +55,65 @@ td{
 	font-size: 12pt;
 }
 
+
+/* Bootstrap */
+
+.modal-footer{
+	background-color:  #EC1D25;
+}
+
+.modal-body{
+	background-color: #231F20;
+  	color: #fff;
+}
+
+.modal-header{
+	background-color: #EC1D25;
+  	color: #fff;
+}
+
+
+
+
+.form-control{
+	background-color: #231F20 ;
+	color: #fff;
+}
+
+.form-control:focus {
+  border-color: #EC1D25;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+
+
+
+.btn.btn-default.modalButton{
+  color: #fff;
+  background-color: #231F20;
+  border-color: #ccc;
+  border-radius: 9px;
+  height: 40px;
+  width: 150px;
+}
+
+
+.btn.btn-default.modalButton:hover,
+.btn.btn-default.modalButton:focus{
+   color: #fff;
+  background-color: #600000;
+}
+
+

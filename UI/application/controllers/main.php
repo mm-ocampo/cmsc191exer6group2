@@ -11,6 +11,7 @@ class Main extends CI_Controller {
 		$this->load->view('/modals/addFruitModal');
 		$this->load->view('/modals/editFruitModal');
 		$this->load->view('/modals/editPriceModal');
+		$this->load->view('/modals/deleteFruitModal');
 	}
 
 	public function index(){

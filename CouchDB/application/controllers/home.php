@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 		$this->load->view('/modals/addFruitModal');
 		$this->load->view('/modals/editFruitModal');
 		$this->load->view('/modals/editPriceModal');
+		$this->load->view('/modals/deleteFruitModal');
 		$this->load->model('home_model');
 	}
 	
@@ -40,11 +41,26 @@ class Home extends CI_Controller {
 			$query2 = $this->home_model->add_in_price($doc2);
 
 			if($query && $query2){
-				$this->index();
+				redirect('home/index', 'refresh');
 			}
 
 			// insert in price db
 			//$query2 = $this->home_model->add_in_price($doc2);
+		}
+	}
+
+	public function edit_fruit(){
+		if($this->input->post()){
+			$doc['_id'] = $this->input->post('_id');
+			$doc['_rev'] = $this->input->post('_rev');
+			$doc['name'] = $this->input->post('fruitName');
+			$doc['qty'] = (float) $this->input->post('quantity');
+			$doc['dist'] = $this->input->post('distributor');
+			$doc = json_decode(json_encode($doc));
+			$query = $this->home_model->edit_in_fruit($doc);
+			if($query){
+				redirect('home/index', 'refresh');
+			}
 		}
 	}
 
@@ -55,45 +71,9 @@ class Home extends CI_Controller {
 			$doc['_rev'] = (string) $this->input->post('_rev');
 			$doc = json_decode(json_encode($doc));
 			$query = $this->home_model->delete_in_fruit($doc);
-			echo $query;
-		}
-		// use json_encode and json_decode
-		// must contain _id and _rev to delete
-		/*if ($this->input->post()) {
-			$doc = $this->input->post();
-			$query = $this->home_model->delete_in_fruit($doc);
-			if($query)
-				echo $query;
-		}*/
-		// delete in fruit 
-		/*$query = $this->home_model->delete_in_fruit($doc);
-
-		$query2 = $this->home_model->delete_in_price($doc2);*/
-	}
-
-	public function edit_fruit(){
-		if($this->input->post()){
-			$doc['name'] = $this->input->post('fruitName');
-			$doc['qty'] = (float) $this->input->post('quantity');
-			$doc['dist'] = $this->input->post('distributor');
-
-			$doc = json_decode(json_encode($doc));
-			// insert in fruit db
-			$query = $this->home_model->add_in_fruit($doc);
-
-			$doc2['name'] = $this->input->post('fruitName');
-			$doc2['date'] = date('Y-m-d H:i:s');
-			$doc2['price'] = (float) $this->input->post('price');
-			$doc2 = json_decode(json_encode($doc2));
-			$query2 = $this->home_model->add_in_price($doc2);
-
-			if($query && $query2){
-				$this->index();
+			if($query){
+				redirect('home/index', 'refresh');
 			}
-
-			// insert in price db
-			//$query2 = $this->home_model->add_in_price($doc2);
 		}
 	}
-
 }

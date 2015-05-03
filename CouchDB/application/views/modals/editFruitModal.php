@@ -1,6 +1,5 @@
 <div class="row">
 	<div class="col-md-12">
-
 			<div class="modal fade" id="editFruitModal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
 			    <div class="modal-dialog">
 			      <div class="modal-content">
@@ -13,23 +12,25 @@
 
 
 			          	<!-- THIS IS THE ADD A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="editFruitForm" id="editFruitForm">
+			          	<form action="<?php echo base_url();?>index.php/home/edit_fruit" method="post" name="editFruitForm" id="editFruitForm">
 							  <div class="form-group">
 							    <label for="fruitName">Name</label>
-							    <input type="text" class="form-control" id="fruitName" placeholder="Enter fruit name">
+							    <input type="text" class="form-control" id="fruitName" name="fruitName" placeholder="Enter fruit name" value"">
 							  </div>
 							  <div class="form-group">
 							    <label for="quantity">Quantity</label>
-							    <input type="text" class="form-control" id="quantity" placeholder="Quantity">
+							    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity" value="">
 							  </div>
 							  <div class="form-group">
 							    <label for="distibutor">Distributor</label>
-							    <input type="text" class="form-control" id="distributor" placeholder="Distributor">
+							    <input type="text" class="form-control" id="distributor" name="distributor" placeholder="Distributor" value="">
 							  </div>
 							  <div class="form-group">
 							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Price">
+							    <input type="text" class="form-control" id="price" name="price" placeholder="Price" value="">
 							  </div>
+							  <input type="hidden" id="_id" name="_id" value=""/>
+							  <input type="hidden" id="_rev" name="_rev" value=""/>
 						</form>
 										            
 			          </div>
