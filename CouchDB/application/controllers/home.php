@@ -71,20 +71,9 @@ class Home extends CI_Controller {
 			$doc['_rev'] = (string) $this->input->post('_rev');
 			$doc = json_decode(json_encode($doc));
 			$query = $this->home_model->delete_in_fruit($doc);
-			echo $query;
+			if($query){
+				redirect('home/index', 'refresh');
+			}
 		}
-		// use json_encode and json_decode
-		// must contain _id and _rev to delete
-		/*if ($this->input->post()) {
-			$doc = $this->input->post();
-			$query = $this->home_model->delete_in_fruit($doc);
-			if($query)
-				echo $query;
-		}*/
-		// delete in fruit 
-		/*$query = $this->home_model->delete_in_fruit($doc);
-
-		$query2 = $this->home_model->delete_in_price($doc2);*/
 	}
-
 }

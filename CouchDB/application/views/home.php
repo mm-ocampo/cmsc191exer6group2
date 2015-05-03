@@ -34,10 +34,9 @@
 					    	echo "<td class='qtyoffruit'>". $item['qty'] ."</td>";
 					    	echo "<td class='distoffruit'>". $item['dist'] ."</td>";
 					    	echo "<td class='priceoffruit'>". $prices[$item['name']] ."</td>";
-							echo "<td><button type='button' class='btn btn-success edit-button' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
-							echo "<td><button type='button' class='btn btn-info' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true' class='" . $item['id'] ."'></span></button></td>";
-							echo "<td><button type='button' class='btn btn-danger'><span class='glyphicon glyphicon-trash' aria-hidden='true' id='". $item['id'] ."' rev='". $item['id'] ."'></span></button></td>";
-							<td><button type="button" class="btn btn-danger " data-toggle="modal" data-target="#deleteFruitModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+							echo "<td><button type='button' class='btn btn-success edit-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
+							echo "<td><button type='button' class='btn btn-info edit-price-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
+							echo "<td><button type='button' class='btn btn-danger delete-button' data-toggle='modal' data-target='#deleteFruitModal' id='". $item['id'] ."'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
 							echo "</tr>";
 					    }
 					}
