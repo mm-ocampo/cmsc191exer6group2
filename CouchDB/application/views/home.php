@@ -33,13 +33,13 @@
  						echo "</tr>";
 
 					    foreach($fruits as $item){
-					    	echo "<tr>";
-					    	echo "<td>". $item['name'] ."</td>";
-					    	echo "<td>". $item['qty'] ."</td>";
-					    	echo "<td>". $item['dist'] ."</td>";
-					    	echo "<td>". $prices[$item['name']] ."</td>";
-							echo "<td><button type='button' class='btn btn-success' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true' id='" . $item['id'] ."'></span></button></td>";
-							echo "<td><button type='button' class='btn btn-info' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true' id='" . $item['id'] ."'></span></button></td>";
+					    	echo "<tr class ='". $item['id'] ."' rev='". $item['rev'] ."'>";
+					    	echo "<td class='nameoffruit'>" . $item['name'] . "</td>";
+					    	echo "<td class='qtyoffruit'>". $item['qty'] ."</td>";
+					    	echo "<td class='distoffruit'>". $item['dist'] ."</td>";
+					    	echo "<td class='priceoffruit'>". $prices[$item['name']] ."</td>";
+							echo "<td><button type='button' class='btn btn-success edit-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
+							echo "<td><button type='button' class='btn btn-info' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true' class='" . $item['id'] ."'></span></button></td>";
 							echo "<td><button type='button' class='btn btn-danger'><span class='glyphicon glyphicon-trash' aria-hidden='true' id='". $item['id'] ."' rev='". $item['id'] ."'></span></button></td>";
 							echo "</tr>";
 					    }

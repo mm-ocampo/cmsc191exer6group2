@@ -16,6 +16,7 @@ class Home_model extends CI_Model
             $row = $this->couchdb->getDoc($item->id);
             $temp = array();
             $temp['id'] = $row->_id;
+            $temp['rev'] = $row->_rev;
             $temp['name'] = $row->name;
             $temp['qty'] = $row->qty;
             $temp['dist'] = $row->dist;
@@ -53,6 +54,11 @@ class Home_model extends CI_Model
     public function delete_in_price(){
     	$this->couchdb->useDatabase("price");
     	return $this->couchdb->deleteDoc($doc);	
+    }
+
+    public function edit_in_fruit($doc){
+        $this->couchdb->useDatabase("fruit");
+        return $this->couchdb->storeDoc($doc);
     }
 
 }

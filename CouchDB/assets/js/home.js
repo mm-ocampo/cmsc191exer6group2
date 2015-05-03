@@ -21,4 +21,18 @@ $(document).ready(function(){
 		    }
 		 });
 	});
+
+	$(".edit-button").click(function(){
+		console.log("entered");
+		var id = $(this).attr("id");
+		var rev = $("."+id).attr("rev");
+		$("#editFruitForm #fruitName").attr("value", $("." + id + " .nameoffruit").text());
+		$("#editFruitForm #quantity").attr("value", $("." + id + " .qtyoffruit").text());
+		$("#editFruitForm #distributor").attr("value", $("." + id + " .distoffruit").text());
+		$("#editFruitForm #price").attr("value", $("." + id + " .priceoffruit").text());
+		$("#editFruitForm #_id").attr("value", id);
+		$("#editFruitForm #_rev").attr("value", rev);
+	
+	});
+
 });
