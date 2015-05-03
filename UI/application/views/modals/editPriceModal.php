@@ -24,8 +24,8 @@
 			        </div>
 
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			          <button type="submit" class="btn btn-primary" form="editPriceForm">Save changes</button>
+			          <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+			          <button type="submit" class="btn btn-default modalButton" form="editPriceForm">Save changes</button>
 			        </div>
 			      </div><!-- /.modal-content -->
 			    </div><!-- /.modal-dialog -->
