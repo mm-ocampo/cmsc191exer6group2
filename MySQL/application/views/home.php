@@ -30,6 +30,8 @@
 
 					    foreach($fruits as $item){
 					    	// echo "<tr class ='". $item['id'] ."' rev='". $item['rev'] ."'>";
+					    	
+					    	echo "<tr class ='". $item['id']."'>";
 					    	echo "<td class='nameoffruit'>" . $item['name'] . "</td>";
 					    	echo "<td class='qtyoffruit'>". $item['qty'] ."</td>";
 					    	echo "<td class='distoffruit'>". $item['dist'] ."</td>";
