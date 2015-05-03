@@ -25,10 +25,6 @@
 							    <label for="distibutor">Distributor</label>
 							    <input type="text" class="form-control" id="distributor" name="distributor" placeholder="Distributor" value="">
 							  </div>
-							  <div class="form-group">
-							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" name="price" placeholder="Price" value="">
-							  </div>
 							  <input type="hidden" id="_id" name="_id" value=""/>
 							  <input type="hidden" id="_rev" name="_rev" value=""/>
 						</form>
