@@ -26,18 +26,16 @@
 							    <label for="distibutor">Distributor</label>
 							    <input type="text" class="form-control" id="distributor" placeholder="Enter new distributor">
 							  </div>
-							  <div class="form-group">
-							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Enter new price">
-							  </div>
+							  
 						</form>
 										            
 			          </div>
 			        </div>
 
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
 			          <button type="submit" class="btn btn-default modalButton" form="editFruitForm">Save changes</button>
+			          <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+			          
 			        </div>
 			      </div><!-- /.modal-content -->
 			    </div><!-- /.modal-dialog -->

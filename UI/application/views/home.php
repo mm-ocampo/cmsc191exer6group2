@@ -30,7 +30,7 @@
 						<td>...</td> 
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
-						<td><button type="button" class="btn btn-danger "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-danger " data-toggle="modal" data-target="#deleteFruitModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<tr>
@@ -40,7 +40,7 @@
 						<td>...</td> 
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
-						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-danger " data-toggle="modal" data-target="#deleteFruitModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<tr>
@@ -50,7 +50,7 @@
 						<td>...</td> 
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
-						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-danger " data-toggle="modal" data-target="#deleteFruitModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<tr>
@@ -60,7 +60,7 @@
 						<td>...</td> 
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editFruitModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
 						<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editPriceModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
-						<td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+						<td><button type="button" class="btn btn-danger " data-toggle="modal" data-target="#deleteFruitModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
 					</tr>
 
 					<!-- THIS IS THE ADD BUTTON (PLUS SIGN) -->
