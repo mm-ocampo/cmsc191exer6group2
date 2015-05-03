@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 		$this->load->view('/modals/addFruitModal');
 		$this->load->view('/modals/editFruitModal');
 		$this->load->view('/modals/editPriceModal');
+		$this->load->view('/modals/deleteFruitModal');
 		$this->load->model('home_model');
 	}
 	
