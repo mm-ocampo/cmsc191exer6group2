@@ -13,9 +13,19 @@ class M_home extends CI_Model
         return $fruits->result_array();
     }
 
+    public function retrieve_all_prices(){
+        // $this->db->useDatabase("price");
+        // $query =$this->couchdb->getAllDocs();
+        // $result = array();
+        // foreach ($query->rows as $item){
+        //     $row = $this->couchdb->getDoc($item->id);
+        //     $result[$row->name] = $row->price;
+        // }
+        // return $result;
+    }
+
     public function add_in_fruit($doc){
-    	$this->couchdb->useDatabase("fruit");
-    	return $this->couchdb->storeDoc($doc);
+    	return $this->db->insert('fruit', $doc);
     }
 
     public function add_in_price($doc){

@@ -1,25 +1,119 @@
-.horse{
-	width: 150px;
-	height: 150px;
+.title{
+	color: #000;
+	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	font-size: 50pt;
+	padding:  2%;
 }
 
-.engineName{
-	color: #333;
-	font-family: 'Raleway', sans-serif;	
-}
-
-.topLine{
-	background-color: #0099CC;
-	height: 5px;
-	margin-bottom:100px;
-}
 
 .tableRow{
 	padding: 50px;
+	color: #333;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
-.plus{
-	font-size: 18pt;
-	color: green;
+.tableDiv{
+	background-color: #231F20	;
+	color: #fff;
 }
+
+.titleRow{
+	background: url('../images/background.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+	padding-top: 10px;
+}
+
+.tableRow .th{
+	font-size: 15pt;
+	background-color: #EC1D25;
+}
+
+.subTh{
+	font-size: 11pt;
+	background-color: #EC1D25;
+}
+
+td{
+	font-size: 10pt;
+}
+
+.footer{
+	background-color: #333;
+	color: #666;
+	font-size: 14pt;
+	padding: 2% 2%;
+}
+
+.gitIcon{
+	font-size: 20pt;
+	margin: 0 10px;
+}
+
+.copyright{
+	font-size: 12pt;
+}
+
+
+/* Bootstrap */
+
+.modal-footer{
+	background-color:  #EC1D25;
+}
+
+.modal-body{
+	background-color: #231F20;
+  	color: #fff;
+}
+
+.modal-header{
+	background-color: #EC1D25;
+  	color: #fff;
+}
+
+
+
+
+.form-control{
+	background-color: #231F20 ;
+	color: #fff;
+}
+
+.form-control:focus {
+  border-color: #EC1D25;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+
+
+
+.btn.btn-default.modalButton{
+  color: #fff;
+  background-color: #231F20;
+  border-color: #ccc;
+  border-radius: 9px;
+  height: 40px;
+  width: 150px;
+}
+
+
+.btn.btn-default.modalButton:hover,
+.btn.btn-default.modalButton:focus{
+   color: #fff;
+  background-color: #600000;
+}
+
 

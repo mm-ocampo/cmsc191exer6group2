@@ -13,18 +13,18 @@
 
 
 			          	<!-- THIS IS THE ADD A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="addFruitForm" id="addFruitForm">
+			          	<form action="<?php echo base_url();?>index.php/main/add_fruit" method="post" name="addFruitForm" id="addFruitForm">
 							  <div class="form-group">
 							    <label for="fruitName">Name</label>
-							    <input type="text" class="form-control" id="fruitName" placeholder="Enter fruit name">
+							    <input type="text" class="form-control" id="fruitName" name="fruitName" placeholder="Enter fruit name">
 							  </div>
 							  <div class="form-group">
 							    <label for="quantity">Quantity</label>
-							    <input type="text" class="form-control" id="quantity" placeholder="Quantity">
+							    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
 							  </div>
 							  <div class="form-group">
 							    <label for="distibutor">Distributor</label>
-							    <input type="text" class="form-control" id="distributor" placeholder="Distributor">
+							    <input type="text" class="form-control" id="distributor" name="distributor" placeholder="Distributor">
 							  </div>
 							  <div class="form-group">
 							    <label for="price">Price</label>
