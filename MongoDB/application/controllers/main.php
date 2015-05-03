@@ -26,15 +26,20 @@ class Main extends CI_Controller {
 	}
 
 	public function addFruit(){
+		$dateArr = array();
+		$oneDate = array();
+		$oneDate["date"] = date("m/d/Y");
+		$oneDate["price"] = $this->input->get('price');
+		$dateArr[] = $oneDate;
 		$data = array(
-			'name' => $this->input->post('fruitName'),
-			'qty' => $this->input->post('quantity'),
-			'dist' => $this->input->post('distributor'),
-			'price' => $this->input->post('price')
+			'name' => $this->input->get('fruitName'),
+			'qty' => $this->input->get('quantity'),
+			'dist' => $this->input->get('distributor'),
+			'price' => $dateArr
 		);
 		$this->mongo_db->insert('fruit', $data);
 
-		redirect(base_url()."index");
+		redirect(base_url());
 	}
 
 }

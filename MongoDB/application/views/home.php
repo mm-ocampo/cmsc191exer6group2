@@ -33,7 +33,7 @@
 							echo "<table>";
 							foreach($row["price"] as $r){
 								echo "<tr>";
-								echo "<td>${r["date"]}</td>";
+								echo "<td>${r["date"]}: </td>";
 								echo "<td>${r["price"]}</td>";
 								echo "</tr>";
 							}

@@ -13,7 +13,7 @@
 
 
 			          	<!-- THIS IS THE ADD A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/main/success" method="get" name="addFruitForm" id="addFruitForm">
+			          	<form action="<?php echo base_url();?>index.php/main/addFruit" method="get" name="addFruitForm" id="addFruitForm">
 							  <div class="form-group">
 							    <label for="fruitName">Name</label>
 							    <input type="text" name = "fruitName" class="form-control" id="fruitName" placeholder="Enter fruit name">
