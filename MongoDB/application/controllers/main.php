@@ -20,11 +20,6 @@ class Main extends CI_Controller {
 		$this->load->view('home', $data);
 	}
 
-	// THIS IS JUST A DUMMY SUCCESS PAGE
-	public function success(){
-		$this->load->view('success');
-	}
-
 	public function addFruit(){
 		$dateArr = array();
 		$oneDate = array();
@@ -39,6 +34,12 @@ class Main extends CI_Controller {
 		);
 		$this->mongo_db->insert('fruit', $data);
 
+		redirect(base_url());
+	}
+
+	public function deleteFruit(){
+		$this->mongo_db->where('name', $this->input->get('name'));
+		$this->mongo_db->delete('fruit');
 		redirect(base_url());
 	}
 
