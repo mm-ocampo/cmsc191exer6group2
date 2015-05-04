@@ -20,9 +20,10 @@ class Main extends CI_Controller {
 	}
 
 	public function addFruit(){
+		date_default_timezone_set('PHT');
 		$dateArr = array();
 		$oneDate = array();
-		$oneDate["date"] = date("m/d/Y");
+		$oneDate["date"] = date("m/d/Y H:i e");
 		$oneDate["price"] = $this->input->get('price');
 		$dateArr[] = $oneDate;
 		$data = array(
@@ -58,6 +59,7 @@ class Main extends CI_Controller {
 	}
 
 	public function editPrice(){
+		date_default_timezone_set('PHT');
 		$this->mongo_db->where(array("_id" => $this->input->get('idContainer')))->get('fruit');
 		$query = $this->mongo_db->get('fruit');
 		$data = null;
@@ -65,7 +67,7 @@ class Main extends CI_Controller {
 			$data = $row['price'];
 		}
 		$data[] = array(
-			'date' => date('m/d/Y'),
+			'date' => date('m/d/Y H:i e'),
 			'price'=> $this->input->get("price")
 		);
 		print_r($data);

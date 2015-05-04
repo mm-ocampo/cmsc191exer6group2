@@ -22,7 +22,7 @@ INSTALLATION INSTRUCTIONS:
      to your APACHE bin directory (**xampp/apache/bin** or **wamp/apache/apache<version>/bin**)
    7. Run your Apache server. It should work now.
 
-**2. Run MongoDB**
+**2. Run MongoDB and Create Schema**
    1. From your command line, run mongod.exe
    2. Open another command line and run mongo.exe
    3. type the following commands (in order):
@@ -41,6 +41,22 @@ INSTALLATION INSTRUCTIONS:
             ]
         }
     )
+    ```
+
+    the basic structure of this schema is this:
+
+    ```
+    {
+        name: "Banana",
+        qty: 100,
+        dist: "KrabbLabs Farms and Fruit Deliveries, Inc.",
+        price:[
+            {
+                date: "05/04/2015 15:22 Europe/Berlin",
+                price: 100
+            }
+        ]
+    }
     ```
 
 **3. Go to localhost/cmsc191exer6group2/MongoDB**
