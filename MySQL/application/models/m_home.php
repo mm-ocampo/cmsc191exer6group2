@@ -34,8 +34,9 @@ class M_home extends CI_Model
     	return $this->db->insert('price', $doc);
     }
 
-    public function delete_in_fruit($doc){
-        var_dump($doc);
+    public function delete_in_fruit($id){
+        $this->db->where('id', $id);
+        return $this->db->delete('fruit'); 
 
     }
 

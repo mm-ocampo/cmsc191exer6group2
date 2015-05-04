@@ -53,15 +53,15 @@ class Main extends CI_Controller {
 	}
 
 	public function delete_fruit(){
-		if($this->input->post()){
-			$doc['_id'] = (string) $this->input->post('_id');
-			$doc = json_decode(json_encode($doc));
-			var_dump($doc);
-			// $query = $this->m_home->delete_in_fruit($doc);
-			// if($query){
-			// 	redirect('main/index', 'refresh');
-			// }
-		}
+
+			$id = (string) $this->input->get('id');
+			
+			// var_dump($doc);
+			$query = $this->m_home->delete_in_fruit($id);
+			if($query){
+				redirect('main/index', 'refresh');
+			}
+		
 	}
 
 }
