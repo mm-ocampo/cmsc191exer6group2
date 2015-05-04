@@ -13,9 +13,7 @@
 
 			          	<h5>Are you sure you want to delete this fruit?</h3>
 			          	<!-- THIS IS THE DELETE A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/home/delete_fruit" method="post" name="deleteFruitForm" id="deleteFruitForm">
-							<input type="hidden" id="_id" name="_id" value=""/>
-							<input type="hidden" id="_rev" name="_rev" value=""/>
+			          	<form action="<?php echo base_url();?>index.php/main/delete_fruit" method="post" name="deleteFruitForm" id="deleteFruitForm">
 						</form>
 										            
 			          </div>

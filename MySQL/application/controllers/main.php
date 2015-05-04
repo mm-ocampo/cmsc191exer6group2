@@ -45,11 +45,23 @@ class Main extends CI_Controller {
 			$query2 = $this->m_home->add_in_price($doc2);
 
 			if($query && $query2){
-				redirect('home/index', 'refresh');
+				redirect('main/index', 'refresh');
 			}
 			// insert in price db
 			//$query2 = $this->home_model->add_in_price($doc2);
 		}
+	}
+
+	public function delete_fruit(){
+
+			$id = (string) $this->input->get('id');
+			
+			// var_dump($doc);
+			$query = $this->m_home->delete_in_fruit($id);
+			if($query){
+				redirect('main/index', 'refresh');
+			}
+		
 	}
 
 }

@@ -38,7 +38,8 @@
 					    	echo "<td class='priceoffruit'>". $prices[$item['name']] ."</td>";
 							echo "<td><button type='button' class='btn btn-success edit-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
 							echo "<td><button type='button' class='btn btn-info edit-price-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
-							echo "<td><button type='button' class='btn btn-danger delete-button' data-toggle='modal' data-target='#deleteFruitModal' id='". $item['id'] ."'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
+							echo "<td><a class=\"btn btn-danger\" href=\"index.php/main/delete_fruit?id=${item["id"]}"."\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></td>";
+							
 							echo "</tr>";
 					    }
 					}
