@@ -53,15 +53,13 @@ class Main extends CI_Controller {
 	}
 
 	public function delete_fruit(){
-
-			$id = (string) $this->input->get('id');
-			
-			// var_dump($doc);
+		if($this->input->post()){
+			$id= (string) $this->input->post('_id');
 			$query = $this->m_home->delete_in_fruit($id);
 			if($query){
 				redirect('main/index', 'refresh');
 			}
-		
+		}
 	}
 
 	public function edit_price(){
