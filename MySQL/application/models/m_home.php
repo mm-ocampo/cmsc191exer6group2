@@ -35,8 +35,8 @@ class M_home extends CI_Model
     }
 
     public function delete_in_fruit($doc){
-    	$this->couchdb->useDatabase("fruit");
-    	return $this->couchdb->deleteDoc($doc);
+        var_dump($doc);
+
     }
 
     public function delete_in_price(){
