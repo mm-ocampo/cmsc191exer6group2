@@ -26,10 +26,10 @@
 					<?php
 						foreach($query as $row){
 							echo "<tr>";
-							echo "<td>${row["name"]}</td>";
-							echo "<td>${row["qty"]}</td>";
-							echo "<td>${row["dist"]}</td>";
-							echo "<td>";
+							echo "<td id=\"${row["_id"]}name\">${row["name"]}</td>";
+							echo "<td id=\"${row["_id"]}qty\">${row["qty"]}</td>";
+							echo "<td id=\"${row["_id"]}dist\">${row["dist"]}</td>";
+							echo "<td id=\"${row["_id"]}table\">";
 							echo "<table>";
 							foreach($row["price"] as $r){
 								echo "<tr>";
@@ -39,7 +39,7 @@
 							}
 							echo "</table>";
 							echo "</td>";
-							echo "<td><button type=\"button\" class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
+							echo "<td><button type=\"button\" class=\"btn btn-success edit-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><button type=\"button\" class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#editPriceModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><a class=\"btn btn-danger\" href=\"index.php/main/deleteFruit?name=${row["name"]}"."\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></td>";
 							echo "</tr>";
@@ -70,5 +70,9 @@
 		</div>
 	</div>
 
+	<!--load scripts-->
+	<script src="<?php echo base_url();?>assets/js/jquery-1.11.2.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/home.js"></script>
 </body>
 </html>

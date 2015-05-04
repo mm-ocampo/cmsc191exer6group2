@@ -16,7 +16,6 @@ class Main extends CI_Controller {
 	public function index(){
 		$query = $this->mongo_db->get('fruit');
 		$data['query'] = $query;
-		//TODO PRICE CHECKER
 		$this->load->view('home', $data);
 	}
 
@@ -34,6 +33,27 @@ class Main extends CI_Controller {
 		);
 		$this->mongo_db->insert('fruit', $data);
 
+		redirect(base_url());
+	}
+
+	public function editFruit(){
+		echo $this->input->get('idContainer');
+		echo $this->input->get('fruitName');
+		echo $this->input->get('quantity');
+		echo $this->input->get('distributor');
+		$data = array(
+			'name' => $this->input->get('fruitName'),
+			'qty' => $this->input->get('quantity'),
+			'dist' => $this->input->get('distributor')
+		);
+		$var = $this->input->get('idContainer');
+		//echo $var;
+		$this->mongo_db->where(array("_id" => $var))->get('fruit');
+		//$this->mongo_db->select('name, qty');
+		//$query = $this->mongo_db->get('fruit');
+		//var_dump($query);
+		$this->mongo_db->set($data)->update('fruit');
+		//$this->mongo_db->where(array('_id'=>$var))->set($data)->update('fruit');
 		redirect(base_url());
 	}
 
