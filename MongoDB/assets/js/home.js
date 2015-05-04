@@ -22,4 +22,9 @@ $(document).ready(function(){
 		$("#deleteFruitForm #_id").attr("value", id);
 		$("#deleteFruitForm #_rev").attr("value", rev);
 	});
+
+	$(".edit-price-button").click(function(){
+		var id = $(this).attr("id");
+		$("#editFruitForm #idContainer1").attr("value", id);
+	});
 });

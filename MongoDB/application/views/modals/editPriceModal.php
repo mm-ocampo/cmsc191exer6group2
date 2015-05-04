@@ -13,11 +13,11 @@
 
 
 			          	<!-- THIS IS THE ADD A FRUIT FORM -->
-			          	<form action="<?php echo base_url();?>index.php/main/editFruit" method="get" name="editPriceForm" id="editPriceForm">
+			          	<form action="<?php echo base_url();?>index.php/main/editPrice" method="get" name="editPriceForm" id="editPriceForm">
 							  <div class="form-group">
 							    <label for="price">Price</label>
-							    <input type="text" class="form-control" id="price" placeholder="Enter New Price">
-								  <input type="hidden" id="idContainer" name="idContainer"/>
+							    <input type="text" class="form-control" name="price" id="price" placeholder="Enter New Price">
+								  <input type="hidden" id="idContainer1" name="idContainer1"/>
 							  </div>
 						</form>
 										            

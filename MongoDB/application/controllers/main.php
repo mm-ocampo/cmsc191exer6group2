@@ -57,6 +57,24 @@ class Main extends CI_Controller {
 		redirect(base_url());
 	}
 
+	public function editPrice(){
+		$this->mongo_db->where(array("_id" => $this->input->get('idContainer')))->get('fruit');
+		$query = $this->mongo_db->get('fruit');
+		$data = null;
+		foreach($query as $row){
+			$data = $row['price'];
+		}
+		$data[] = array(
+			'date' => date('m/d/Y'),
+			'price'=> $this->input->get("price")
+		);
+		print_r($data);
+		$this->mongo_db->set(array('price' => null))->update('fruit');
+		$this->mongo_db->set(array('price' => $data))->update('fruit');
+
+		redirect(base_url());
+	}
+
 	public function deleteFruit(){
 		$this->mongo_db->where('name', $this->input->get('name'));
 		$this->mongo_db->delete('fruit');
