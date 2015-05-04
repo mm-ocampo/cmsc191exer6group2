@@ -20,6 +20,7 @@ class Home_model extends CI_Model
             $temp['name'] = $row->name;
             $temp['qty'] = $row->qty;
             $temp['dist'] = $row->dist;
+            $temp['prices'] = $row->prices;
             array_push($result, $temp);
         }
         return $result;
@@ -47,24 +48,21 @@ class Home_model extends CI_Model
     	return $this->couchdb->storeDoc($doc);
     }
 
-    public function add_in_price($doc){
-    	$this->couchdb->useDatabase("price");
-    	return $this->couchdb->storeDoc($doc);
-    }
 
     public function delete_in_fruit($doc){
     	$this->couchdb->useDatabase("fruit");
     	return $this->couchdb->deleteDoc($doc);
     }
 
-    public function delete_in_price(){
-    	$this->couchdb->useDatabase("price");
-    	return $this->couchdb->deleteDoc($doc);	
-    }
 
     public function edit_in_fruit($doc){
         $this->couchdb->useDatabase("fruit");
         return $this->couchdb->storeDoc($doc);
+    }
+
+    public function get_fields($id){
+        $this->couchdb->useDatabase("fruit");
+        return $this->couchdb->getDoc($id);
     }
 
 }

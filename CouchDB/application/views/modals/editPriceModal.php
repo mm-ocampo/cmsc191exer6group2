@@ -17,6 +17,7 @@
 					    <input type="text" class="form-control" id="price" name="price" placeholder="Enter New Price">
 					  </div>
 					  <input type="hidden" name="fruitId" id="fruitId" value=""/>
+					  <input type="hidden" name="fruitRev" id="fruitRev" value=""/>
 				</form>
 								            
 	          </div>

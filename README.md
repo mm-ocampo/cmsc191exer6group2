@@ -6,6 +6,9 @@ INSTALLATION INSTRUCTIONS:
 ## MySQL
 
 ## CouchDB
+1. Make sure couchdb is running on your device. 
+2. Create a database fruit in your couchdb.
+3. Go to http://localhost/cmsc191exer6group2/couchDB to test the app. 
 
 ## MongoDB
 **1. Have a PHP-MongoDB Connection by installing PECL**

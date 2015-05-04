@@ -33,7 +33,7 @@
 					    	echo "<td class='nameoffruit'>" . $item['name'] . "</td>";
 					    	echo "<td class='qtyoffruit'>". $item['qty'] ."</td>";
 					    	echo "<td class='distoffruit'>". $item['dist'] ."</td>";
-					    	echo "<td class='priceoffruit'>". $item['price'] ."</td>";
+					    	echo "<td class='priceoffruit'>". $item['prices'][count($item['prices']) - 1]->price ."</td>";
 							echo "<td><button type='button' class='btn btn-success edit-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editFruitModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
 							echo "<td><button type='button' class='btn btn-info edit-price-button' id='" . $item['id'] ."' data-toggle='modal' data-target='#editPriceModal'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button></td>";
 							echo "<td><button type='button' class='btn btn-danger delete-button' data-toggle='modal' data-target='#deleteFruitModal' id='". $item['id'] ."'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";

@@ -16,19 +16,6 @@ class Home extends CI_Controller {
 	
 	public function index(){
 		$query = $this->home_model->retrieve_all();
-		$query2 = $this->home_model->retrieve_all_prices();
-		/*$data['prices'] = $query2;*/
-		$counter = 0;
-		$price = 0;
-		foreach ($query as $item) {
-			for ($i=0; $i < count($query2) ; $i++) { 
-				if($item['id'] == $query2[$i]['fruitId']){
-					$price = $query2[$i]['price'];
-					break;
-				}
-			}
-			$query[$counter++]['price'] = $price;
-		}
 		$data['fruits'] = $query;
 		$this->load->view('home', $data);
 	}
@@ -40,19 +27,16 @@ class Home extends CI_Controller {
 			$doc['name'] = $this->input->post('fruitName');
 			$doc['qty'] = (float) $this->input->post('quantity');
 			$doc['dist'] = $this->input->post('distributor');
-
+			$doc['prices'] = array();
+			$temp['price'] = (float) $this->input->post('price');
+			$temp['date'] = date('Y-m-d H:i:s');
+			array_push($doc['prices'], $temp);
 			$doc = json_decode(json_encode($doc));
+			
 			// insert in fruit db
 			$query = $this->home_model->add_in_fruit($doc);
-			$doc2['fruitId'] = $query->id;
-			$doc2['fruitRev'] = $query->rev;
-			$doc2['name'] = $this->input->post('fruitName');
-			$doc2['date'] = date('Y-m-d H:i:s');
-			$doc2['price'] = (float) $this->input->post('price');
-			$doc2 = json_decode(json_encode($doc2));
-			$query2 = $this->home_model->add_in_price($doc2);
 
-			if($query && $query2){
+			if($query){
 				redirect('home/index', 'refresh');
 			}
 		}
@@ -65,6 +49,8 @@ class Home extends CI_Controller {
 			$doc['name'] = $this->input->post('fruitName');
 			$doc['qty'] = (float) $this->input->post('quantity');
 			$doc['dist'] = $this->input->post('distributor');
+			$query2 = $this->home_model->get_fields($doc['_id']);
+			$doc['prices'] = $query2->prices;
 			$doc = json_decode(json_encode($doc));
 			$query = $this->home_model->edit_in_fruit($doc);
 			if($query){
@@ -88,11 +74,21 @@ class Home extends CI_Controller {
 	
 	public function edit_price(){
 		if($this->input->post()){
-			$doc['fruitId'] = $this->input->post('fruitId');
-			$doc['price'] = (float) $this->input->post('price');
-			$doc = json_decode(json_encode($doc));
-			$query = $this->home_model->add_in_price($doc);
-			if($query){
+			$doc2['_id'] = $this->input->post('fruitId');
+			$doc2['_rev'] = $this->input->post('fruitRev');
+			$query2 = $this->home_model->get_fields($doc2['_id']);
+			$temp['date'] = date('Y-m-d H:i:s');
+			$temp['price'] = (float) $this->input->post('price');
+			array_push($query2->prices, $temp);
+			$doc2['prices'] = $query2->prices;
+			$doc2['name'] = $query2->name;
+			$doc2['qty'] = $query2->qty;
+			$doc2['dist'] = $query2->dist;
+			
+			$doc2 = json_decode(json_encode($doc2));
+			$query3 = $this->home_model->edit_in_fruit($doc2);
+			
+			if($query3){
 				redirect('home/index', 'refresh');
 			}
 		}

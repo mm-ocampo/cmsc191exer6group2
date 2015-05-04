@@ -22,7 +22,9 @@ $(document).ready(function(){
 
 	$(".edit-price-button").click(function(){
 		var fruitId = $(this).attr("id");
+		var fruitRev = $("."+fruitId).attr("rev");
 		$("#editPriceForm #fruitId").attr("value", fruitId);
+		$("#editPriceForm #fruitRev").attr("value", fruitRev);
 	});
 
 });
