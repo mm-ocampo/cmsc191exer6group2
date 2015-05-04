@@ -11,13 +11,12 @@
 	          <div class="container-fluid">
 
 	          	<!-- THIS IS THE ADD A FRUIT FORM -->
-	          	<form action="<?php echo base_url();?>index.php/home/edit_price" method="post" name="editPriceForm" id="editPriceForm">
+	          	<form action="<?php echo base_url();?>index.php/main/edit_price" method="post" name="editPriceForm" id="editPriceForm">
 					  <div class="form-group">
-					  	<h3 id="editpricefruitname"></h3>
-					  	<h3 id="oldprice"></h3>
 					    <label for="price">Price</label>
-					    <input type="text" class="form-control" id="price" placeholder="Enter New Price">
+					    <input type="text" class="form-control" id="price" name="price" placeholder="Enter New Price">
 					  </div>
+					  <input type="hidden" name="fruitId" id="fruitId" value=""/>
 				</form>
 								            
 	          </div>

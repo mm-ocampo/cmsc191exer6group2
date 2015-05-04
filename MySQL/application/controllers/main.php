@@ -64,6 +64,18 @@ class Main extends CI_Controller {
 		
 	}
 
+	public function edit_price(){
+		if($this->input->post()){
+			$doc['fruit_id'] = $this->input->post('fruitId');
+			$doc['price'] = (float) $this->input->post('price');
+			$doc = json_decode(json_encode($doc));
+			$query = $this->m_home->add_in_price($doc);
+			if($query){
+				redirect('main/index', 'refresh');
+			}
+		}
+	}
+
 }
 
 /* End of file welcome.php */
