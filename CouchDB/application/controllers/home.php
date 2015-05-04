@@ -16,9 +16,20 @@ class Home extends CI_Controller {
 	
 	public function index(){
 		$query = $this->home_model->retrieve_all();
-		$data['fruits'] = $query;
 		$query2 = $this->home_model->retrieve_all_prices();
-		$data['prices'] = $query2;
+		/*$data['prices'] = $query2;*/
+		$counter = 0;
+		$price = 0;
+		foreach ($query as $item) {
+			for ($i=0; $i < count($query2) ; $i++) { 
+				if($item['id'] == $query2[$i]['fruitId']){
+					$price = $query2[$i]['price'];
+					break;
+				}
+			}
+			$query[$counter++]['price'] = $price;
+		}
+		$data['fruits'] = $query;
 		$this->load->view('home', $data);
 	}
 
@@ -33,7 +44,8 @@ class Home extends CI_Controller {
 			$doc = json_decode(json_encode($doc));
 			// insert in fruit db
 			$query = $this->home_model->add_in_fruit($doc);
-
+			$doc2['fruitId'] = $query->id;
+			$doc2['fruitRev'] = $query->rev;
 			$doc2['name'] = $this->input->post('fruitName');
 			$doc2['date'] = date('Y-m-d H:i:s');
 			$doc2['price'] = (float) $this->input->post('price');
@@ -43,9 +55,6 @@ class Home extends CI_Controller {
 			if($query && $query2){
 				redirect('home/index', 'refresh');
 			}
-
-			// insert in price db
-			//$query2 = $this->home_model->add_in_price($doc2);
 		}
 	}
 
@@ -71,6 +80,18 @@ class Home extends CI_Controller {
 			$doc['_rev'] = (string) $this->input->post('_rev');
 			$doc = json_decode(json_encode($doc));
 			$query = $this->home_model->delete_in_fruit($doc);
+			if($query){
+				redirect('home/index', 'refresh');
+			}
+		}
+	}
+	
+	public function edit_price(){
+		if($this->input->post()){
+			$doc['fruitId'] = $this->input->post('fruitId');
+			$doc['price'] = (float) $this->input->post('price');
+			$doc = json_decode(json_encode($doc));
+			$query = $this->home_model->add_in_price($doc);
 			if($query){
 				redirect('home/index', 'refresh');
 			}

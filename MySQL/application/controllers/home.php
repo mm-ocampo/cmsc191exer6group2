@@ -19,6 +19,25 @@ class Home extends CI_Controller {
 		$this->load->view('home', $data);
 	}
 
+	public function add_fruit(){
+		// use json_encode then json_decode
+		if($this->input->post()){
+			$doc['name'] = $this->input->post('fruitName');
+			$doc['qty'] = $this->input->post('quantity');
+			$doc['dist'] = $this->input->post('distributor');
+
+			$doc = json_decode(json_encode($doc));
+			// insert in fruit db
+			$query = $this->home_model->add_in_fruit($doc);
+			if($query){
+				$this->index();
+			}
+
+			// insert in price db
+			//$query2 = $this->home_model->add_in_price($doc2);
+		}
+	}
+
 	// THIS IS JUST A DUMMY SUCCESS PAGE
 	public function success(){
 		$this->load->view('success');
