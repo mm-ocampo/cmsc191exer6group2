@@ -74,6 +74,21 @@ class Main extends CI_Controller {
 		}
 	}
 
+	public function edit_fruit(){
+		if($this->input->post()){
+			$doc['id'] = $this->input->post('_id');
+			$doc['name'] = $this->input->post('fruitName');
+			$doc['qty'] = (float) $this->input->post('quantity');
+			$doc['dist'] = $this->input->post('distributor');
+
+			$doc = json_decode(json_encode($doc));
+			$query = $this->m_home->edit_in_fruit($doc);
+			if($query){
+				redirect('main/index', 'refresh');
+			}
+		}
+	}
+
 }
 
 /* End of file welcome.php */

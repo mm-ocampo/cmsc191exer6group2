@@ -53,4 +53,11 @@ class M_home extends CI_Model
         return $query->result_array()[0]['id'];
     }
 
+    public function edit_in_fruit($doc){
+        $this->db->where('id', $doc->id);
+        return $this->db->update('fruit', $doc); 
+
+    }
+
+
 }
