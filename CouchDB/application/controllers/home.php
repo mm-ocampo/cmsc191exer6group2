@@ -40,7 +40,10 @@ class Home extends CI_Controller {
 			$doc['name'] = $this->input->post('fruitName');
 			$doc['qty'] = (float) $this->input->post('quantity');
 			$doc['dist'] = $this->input->post('distributor');
-
+			$doc['prices'] = array();
+			$temp['price'] = $this->input->post('price');
+			$temp['date'] = date('Y-m-d H:i:s');
+			array_push($doc['prices'], $temp);
 			$doc = json_decode(json_encode($doc));
 			// insert in fruit db
 			$query = $this->home_model->add_in_fruit($doc);
@@ -89,6 +92,7 @@ class Home extends CI_Controller {
 	public function edit_price(){
 		if($this->input->post()){
 			$doc['fruitId'] = $this->input->post('fruitId');
+			$doc['fruitRev'] = $this->input->post('fruitRev');
 			$doc['price'] = (float) $this->input->post('price');
 			$doc = json_decode(json_encode($doc));
 			$query = $this->home_model->add_in_price($doc);
