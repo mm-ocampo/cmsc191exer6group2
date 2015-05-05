@@ -44,6 +44,7 @@
 							echo "<td><button type=\"button\" class=\"btn btn-success edit-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><button type=\"button\" class=\"btn btn-info edit-price-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#editPriceModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><a class=\"btn btn-danger\" href=\"index.php/main/deleteFruit?name=${row["name"]}"."\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></td>";
+							// echo "<td><button type=\"button\" class=\"btn btn-danger delete-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#deleteFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "</tr>";
 						}
 					?>

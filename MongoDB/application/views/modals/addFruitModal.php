@@ -36,8 +36,9 @@
 			        </div>
 
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			          <button type="submit" class="btn btn-primary" form="addFruitForm">Save changes</button>
+			          <button type="submit" class="btn btn-default modalButton" form="addFruitForm">Save changes</button>
+			          <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+			          
 			        </div>
 			      </div><!-- /.modal-content -->
 			    </div><!-- /.modal-dialog -->
