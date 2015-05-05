@@ -36,8 +36,7 @@ class M_home extends CI_Model
 
     public function delete_in_fruit($id){
         $this->db->where('id', $id);
-        return $this->db->delete('fruit'); 
-
+        return $this->db->delete('fruit');
     }
 
     public function delete_in_price(){
