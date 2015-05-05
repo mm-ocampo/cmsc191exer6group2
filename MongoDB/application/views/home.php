@@ -29,6 +29,8 @@
 							echo "<td id=\"${row["_id"]}name\">${row["name"]}</td>";
 							echo "<td id=\"${row["_id"]}qty\">${row["qty"]}</td>";
 							echo "<td id=\"${row["_id"]}dist\">${row["dist"]}</td>";
+							echo "<td id=\"${row["_id"]}table\">${row["price"]}</td>";
+							/*
 							echo "<td id=\"${row["_id"]}table\">";
 							echo "<table>";
 							foreach($row["price"] as $r){
@@ -38,7 +40,7 @@
 								echo "</tr>";
 							}
 							echo "</table>";
-							echo "</td>";
+							echo "</td>";*/
 							echo "<td><button type=\"button\" class=\"btn btn-success edit-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#editFruitModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><button type=\"button\" class=\"btn btn-info edit-price-button\" id=\"${row["_id"]}\" data-toggle=\"modal\" data-target=\"#editPriceModal\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button></td>";
 							echo "<td><a class=\"btn btn-danger\" href=\"index.php/main/deleteFruit?name=${row["name"]}"."\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></a></td>";

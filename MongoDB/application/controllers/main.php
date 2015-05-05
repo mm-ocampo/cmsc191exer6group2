@@ -15,7 +15,15 @@ class Main extends CI_Controller {
 
 	public function index(){
 		$query = $this->mongo_db->get('fruit');
-		$data['query'] = $query;
+		$new = $query;
+		//$data['query'] = $query;
+		$i = 0;
+		foreach($query as $row){
+			$count = count($row['price'])-1;
+			$new[$i]['price'] = $row['price'][$count]['price'];
+			$i++;
+		}
+		$data['query'] = $new;
 		$this->load->view('home', $data);
 	}
 
