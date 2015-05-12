@@ -28,7 +28,6 @@ class Main extends CI_Controller {
 	}
 
 	public function addFruit(){
-		date_default_timezone_set('PHT');
 		$dateArr = array();
 		$oneDate = array();
 		$oneDate["date"] = date("m/d/Y H:i e");
@@ -40,8 +39,10 @@ class Main extends CI_Controller {
 			'dist' => $this->input->get('distributor'),
 			'price' => $dateArr
 		);
+//		$before = microtime();
 		$this->mongo_db->insert('fruit', $data);
-
+//		$after = microtime();
+//		echo $after - $before;
 		redirect(base_url());
 	}
 
@@ -61,7 +62,10 @@ class Main extends CI_Controller {
 		//$this->mongo_db->select('name, qty');
 		//$query = $this->mongo_db->get('fruit');
 		//var_dump($query);
+		//$before = microtime();
 		$this->mongo_db->set($data)->update('fruit');
+		//$after = microtime();
+		//echo $after - $before;
 		//$this->mongo_db->where(array('_id'=>$var))->set($data)->update('fruit');
 		redirect(base_url());
 	}
@@ -87,7 +91,11 @@ class Main extends CI_Controller {
 
 	public function deleteFruit(){
 		$this->mongo_db->where('name', $this->input->get('name'));
+		$before = microtime();
 		$this->mongo_db->delete('fruit');
+		$after = microtime();
+		echo $after - $before;
+
 		redirect(base_url());
 	}
 
